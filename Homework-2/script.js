@@ -206,9 +206,7 @@
 // }
 
 // function min(a, b) {
-//     let number;
-//     a < b ? number = a : number = b;
-//     return number;
+//   a < b ? a : b;
 // }
 
 // console.log(min(2, 5));
@@ -219,6 +217,10 @@
 
 // function pow(x, n) {
 //     return Math.pow(x, n);
+// }
+
+// function pow(x, n) {
+//   return x ** n;
 // }
 
 // function pow(x, n) {
@@ -252,4 +254,3 @@
 //     alert("Canceled");
 //   }
 // );
-
