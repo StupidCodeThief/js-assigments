@@ -12,10 +12,8 @@
 // Task 2
 
 // let isEmpty = obj => {
-//   for (let key in obj) {
-//     if (key !== undefined) {
-//       return true;
-//     }
+//   for (const key in obj) {
+//     return true;
 //   }
 //   return false;
 // };
@@ -31,7 +29,7 @@
 
 // Task 4
 
-// let salaries = {
+// const salaries = {
 //   John: 100,
 //   Ann: 160,
 //   Pete: 130
@@ -51,14 +49,14 @@
 
 // Task 5
 
-// let menu = {
+// const menu = {
 //   width: 200,
 //   height: 300,
 //   title: "My menu"
 // };
 
 // const getMultiply = obj => {
-//   //   for (let key in obj) {
+//   //   for (const key in obj) {
 //   //     if (Number(obj[key])) {
 //   //       obj[key] *= 2;
 //   //     }
