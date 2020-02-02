@@ -40,14 +40,14 @@
 // Task 4
 
 // const calculator = {
-//   read: function() {
+//   read() {
 //     this.firstNumber = parseInt(prompt("Enter first number"));
 //     this.secondNumber = parseInt(prompt("Enter second number"));
 //   },
-//   sum: function() {
+//   sum() {
 //     return this.firstNumber + this.secondNumber;
 //   },
-//   mul: function() {
+//   mul() {
 //     return this.firstNumber * this.secondNumber;
 //   }
 // };
