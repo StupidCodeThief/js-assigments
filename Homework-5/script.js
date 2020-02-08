@@ -6,7 +6,7 @@
 
 // Task 2
 
-// getSum = () => {
+// const getSum = () => {
 //   const sum = parseInt(prompt("Enter number 1")) + parseInt(prompt("Enter number 2"));
 //   alert(` Your sum is ${sum}`);
 // };
@@ -38,21 +38,13 @@
 // const getRandomInteger = (min, max) => {
 //     return Math.round(min + Math.random() * (max - min));
 //     // return Math.floor(Math.random() * (max - min + 1)) + min; // found in learnjs
-
 // }
 
 // console.log(getRandomInteger(1, 5))
 
 // Task 7
 
-// const ucFirst = string => {
-//   if (string) {
-//     const result = string[0].toUpperCase() + string.slice(1);
-//     return result;
-//   } else {
-//     return string;
-//   }
-// };
+// const ucFirst = str => (str ? str[0].toUpperCase() + str.slice(1) : str);
 
 // console.log(ucFirst("kek"));
 // console.log(ucFirst("55"));
@@ -60,11 +52,11 @@
 
 // Task 8
 
-// const sheckSpam = string => {
-//   if (!string) {
-//     return string;
+// const sheckSpam = str => {
+//   if (!str) {
+//     return str;
 //   } else {
-//     const result = string.toLowerCase()
+//     const result = str.toLowerCase()
 //     return result.includes("viagra") || result.includes("xxx");
 //   }
 // };
@@ -84,7 +76,7 @@
 //     return str;
 //   }
 
-//   return str.length > maxlength ? str.slice(0, maxlength - 1) + "..." : str;
+//   // return str.length > maxlength ? str.slice(0, maxlength - 1) + "..." : str;
 // };
 
 // console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));
@@ -135,9 +127,9 @@
 // const sumInput = () => {
 //   const arr = [];
 //   while (true) {
-//     let number = prompt("Enter number or press cancel to sum");
-//     if (number === "" || number === null || !isFinite(number)) break;
-//     arr.push(parseInt(number));
+//     let userInput  = prompt("Enter number or press cancel to sum");
+//     if (userInput  === "" || userInput  === null || !isFinite(userInput)) break;
+//     arr.push(parseInt(userInput));
 //   }
 //   alert(
 //     arr.reduce((prev, cur) => {
