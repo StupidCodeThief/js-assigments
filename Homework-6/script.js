@@ -1,15 +1,16 @@
 // Task 1
 
 // const camelize = str => {
-//   let arr = str.split("-");
-//   arr = arr.map(item => {
-//     return item.charAt(0).toUpperCase() + item.slice(1);
-//   });
-//   return console.log(arr.join(""));
+//   return str
+//     .split("-")
+//     .map(item => {
+//       return item.charAt(0).toUpperCase() + item.slice(1);
+//     })
+//     .join("");
 // };
-// camelize("background-color");
-// camelize("list-style-image");
-// camelize("-webkit-transition");
+// console.log(camelize("background-color"));
+// console.log(camelize("list-style-image"));
+// console.log(camelize("-webkit-transition"));
 
 // Task 2
 
@@ -29,9 +30,9 @@
 // const arr = [5, 3, 8, 1];
 
 // const filterRangeInPlace = (arr, min, max) => {
-//   arr.forEach(item => {
+//   arr.forEach((item, index) => {
 //     if (item < min || item > max) {
-//       arr.splice(arr.indexOf(item), 1);
+//       arr.splice(index, 1);
 //     }
 //   });
 // };
@@ -55,8 +56,7 @@
 // const arr = ["HTML", "JavaScript", "CSS"];
 
 // const copySorted = arr => {
-//   const result = arr.slice();
-//   return result.sort((a, b) => {
+//   return arr.slice().sort((a, b) => {
 //     if (a > b) return 1;
 //     if (a == b) return 0;
 //     if (a < b) return -1;
@@ -154,16 +154,16 @@
 // Task 11 && 12
 
 // const unique = arr => {
-//   const result = [];
-//   arr.reduce((prev, cur) => {
-//     if (prev !== cur) {
-//       if (!result.includes(cur)) result.push(cur);
-//     }
-//     return cur;
-//   }, 0);
-//   return result;
-//     // // another solution
-//     // return Array.from(new Set(arr));
+  // return Array.from(new Set(arr));
+  //   // another solution
+  //   const result = [];
+  //   arr.reduce((prev, cur) => {
+  //     if (prev !== cur) {
+  //       if (!result.includes(cur)) result.push(cur);
+  //     }
+  //     return cur;
+  //   }, 0);
+  //   return result;
 // };
 
 // let strings = [
