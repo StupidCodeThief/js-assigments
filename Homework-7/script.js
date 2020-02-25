@@ -45,7 +45,9 @@
 
 // Task 3
 
-// alert(new Date('2012-02-20T03:12:00.000+03:00'));
+// const date = new Date(2012, 1, 20, 3, 12);
+
+// console.log(date);
 
 // Task 4
 
@@ -60,10 +62,10 @@
 
 // const date = new Date();
 // const getWeekDay = date => {
-//     const days = [7, 1, 2, 3, 4, 5, 6];
-//     return days[date.getDay()];
+//   // const days = [7, 1, 2, 3, 4, 5, 6];
+//   // return days[date.getDay()];
 
-//   // return date.getDay() === 0 ? 7 : date.getDay();
+//   return date.getDay() === 0 ? 7 : date.getDay();
 // };
 // console.log(getWeekDay(date));
 
@@ -72,7 +74,10 @@
 // const date = new Date(2015, 0, 2);
 
 // const getDateAgo = (date, daysAgo) => {
-//   return new Date(date.getTime() - daysAgo * 24 * 60 * 60 * 1000).getDate();
+//   // return new Date(date.getTime() - daysAgo * 24 * 60 * 60 * 1000).getDate();
+
+//   const secondsPerDay = 86400000;
+//   return new Date(date.getTime() - daysAgo * secondsPerDay).getDate();
 // };
 
 // console.log(getDateAgo(date, 1));
@@ -96,8 +101,7 @@
 
 // const getSecondsToday = () => {
 //   return Math.round(
-//     (new Date().getTime() -
-//       new Date(new Date().setHours(0, 0, 0, 000)).getTime()) /
+//     (new Date().getTime() - new Date(new Date().setHours(0, 0, 0)).getTime()) /
 //       1000
 //   );
 // };
@@ -108,7 +112,7 @@
 
 // const getSecondsToTomorrow = () => {
 //   return Math.round(
-//     (new Date(new Date().setHours(24, 0, 0, 000)).getTime() -
+//     (new Date(new Date().setHours(24, 0, 0)).getTime() -
 //       new Date().getTime()) /
 //       1000
 //   );
@@ -119,7 +123,7 @@
 // Task 10
 
 // const formatDate = date => {
-//   const past = new Date() - new Date(date);
+//   let past = new Date() - new Date(date);
 
 //   const options = {
 //     year: "2-digit",
@@ -132,12 +136,19 @@
 //   if (past / 1000 < 1) {
 //     return "right now";
 //   }
-//   if (past / 1000 / 60 < 1) {
-//     return `${Math.round(past / 1000)} seconds ago`;
+
+//   past /= 1000;
+
+//   if (past / 60 < 1) {
+//     return `${Math.round(past)} seconds ago`;
 //   }
-//   if (past / 1000 / 60 / 60 < 1) {
-//     return `${Math.round(past / 1000 / 60)} min ago`;
+
+//   past /= 60;
+
+//   if (past / 60 < 1) {
+//     return `${Math.round(past)} min ago`;
 //   }
+
 //   return new Date(date).toLocaleString("ru", options); // alert result looks like "12.02.20, 22:54"
 // };
 
@@ -174,7 +185,7 @@
 // };
 
 // const sumTo = num => {
-//   return ((1 + num) / 2) * num;
+//   return ((num + 1) / 2) * num;
 // }; // the fastest.
 
 // console.log(sumTo(1));
