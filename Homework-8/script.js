@@ -55,9 +55,9 @@
 // Task 4
 
 // const sum = num1 => {
-//   return (num2) => {
-//       return num1 + num2;
-//   }
+//   return num2 => {
+//     return num1 + num2;
+//   };
 // };
 
 // console.log(sum(2)(2));
@@ -68,18 +68,14 @@
 // const arr = [1, 2, 3, 4, 5, 6, 7];
 
 // const inBetween = (from, to) => {
-//   return function() {
-//     if (arguments[0] >= from && arguments[0] <= to) {
-//       console.log(arguments[0]);
-//       return true;
-//     }
-//     return false;
+//   return item => {
+//     return item >= from && item <= to ? true : false;
 //   };
 // };
 
 // const inArray = arr => {
-//   return function() {
-//     return arr.includes(arguments[0]);
+//   return item => {
+//     return arr.includes(item);
 //   };
 // };
 
@@ -94,9 +90,9 @@
 //   { name: "Ann", age: 19, surname: "Hathaway" }
 // ];
 
-// const byField = param => {
-//   return (a, b) => {
-//     return a[param] > b[param] ? 1 : -1;
+// const byField = field => {
+//   return (personA, personB) => {
+//     return personA[field] > personB[field] ? 1 : -1;
 //   };
 // };
 
@@ -126,20 +122,19 @@
 
 // task 8
 
-// const makeCounter = () => {
+// function makeCounter() {
 //   let count = 0;
 
-//   return () => {
-//     counter.set = num => {
-//       count = num;
-//       return count;
-//     };
-//     counter.decrease = () => {
-//       return count--;
-//     };
+//   const counter = () => {
 //     return count++;
 //   };
-// };
+
+//   counter.set = value => (count = value);
+
+//   counter.decrease = () => --count;
+
+//   return counter;
+// }
 
 // const counter = makeCounter();
 
@@ -151,13 +146,18 @@
 
 // const sum = num1 => {
 //   let result = num1;
+
 //   const getSum = num2 => {
 //     result += num2;
+
 //     getSum.toString = () => {
+//       console.log(result);
 //       return result;
 //     };
+
 //     return getSum;
 //   };
+
 //   return getSum;
 // };
 
@@ -206,6 +206,4 @@
 
 // for (let j = 0; j < 100000000; j++) {
 //   i++;
-// }
-
-
+// };
