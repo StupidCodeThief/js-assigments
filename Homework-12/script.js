@@ -108,13 +108,13 @@
 //   .catch(alert); // Error: 404
 
 // async function loadJson2(url) {
-//   let result = await fetch(url);
+//   const result = await fetch(url);
 //   return result((response) => {
 //     if (response.status == 200) {
-//       return response.json();
-//     } else {
-//       throw new Error(response.status);
+//         const user = await response.json();
+//         return user;
 //     }
+//     throw new Error(response.status);
 //   });
 // }
 
@@ -136,27 +136,28 @@
 //   }
 // }
 
-// function loadJson(url) {
-//   return fetch(url).then((response) => {
-//     if (response.status == 200) {
-//       return response.json();
-//     } else {
-//       throw new HttpError(response);
-//     }
-//   });
+// async function loadJson(url) {
+//   const response = await fetch(url);
+
+//   if (response.status === 200) {
+//     const user = await response.json();
+//     return user;
+//   }
+
+//   throw new HttpError(response);
 // }
 
-// Запрашивать логин, пока github не вернёт существующего пользователя.
+// // Запрашивать логин, пока github не вернёт существующего пользователя.
 
 // async function demoGithubUser() {
-//   let result;
-
 //   do {
 //     try {
-//       let name = prompt("Введите логин?", "iliakan");
-//       result = await loadJson(`https://api.github.com/users/${name}`);
-//       result.name ? alert(`Полное имя: ${result.name}.`) : null;
-//       break;
+//       const name = prompt("Введите логин?", "iliakan");
+//       const result = await loadJson(`https://api.github.com/users/${name}`);
+//       if (result.name) {
+//         alert(`Полное имя: ${result.name}.`);
+//         break;
+//       }
 //     } catch (err) {
 //       if (err instanceof HttpError && err.response.status == 404) {
 //         alert("Такого пользователя не существует, пожалуйста, повторите ввод.");
