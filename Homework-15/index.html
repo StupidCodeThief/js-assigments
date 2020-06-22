@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="text"></div>
+    <button class="close">Close div</button>
+    <br />
+
+    Нажмите на поле для перемещения мяча.
+    <br />
+    Мяч не должен выходить за границы поля.
+
+    <div id="field">
+      <img src="https://ru.js.cx/clipart/ball.svg" id="ball" /> . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . .
+    </div>
+
+    <div>
+      <p class="show-list">▶ ▼ Сладости (нажми меня)!</p>
+      <ul class="list visually-hidden">
+        <li>Пирожное</li>
+        <li>Пончик</li>
+        <li>Мёд</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="pane">
+        <h3>Лошадь</h3>
+        <p>
+          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и
+          единственный сохранившийся подвид дикой лошади, вымершей в дикой
+          природе, за исключением небольшой популяции лошади Пржевальского.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Осёл</h3>
+        <p>
+          Домашний осёл (лат. Equus asinus asinus), или ишак, — одомашненный
+          подвид дикого осла (Equus asinus), сыгравший важную историческую роль
+          в развитии хозяйства и культуры человека и по-прежнему широко в
+          хозяйстве многих развивающихся стран.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Кошка</h3>
+        <p>
+          Кошка, или домашняя кошка (лат. Felis silvestris catus), — домашнее
+          животное, одно из наиболее популярных(наряду с собакой)
+          «животных-компаньонов». Являясь одиночным охотником на грызунов и
+          других мелких животных, кошка — социальное животное, использующее для
+          общения широкий диапазон звуковых сигналов.
+        </p>
+      </div>
+    </div>
+    <section class="carusel">
+      <button class="left"><</button>
+      <div class="carusel-items">
+        <img src="./src/1.png" class="carusel-image" alt="">
+        <img src="./src/2.png" class="carusel-image visually-hidden" alt="">
+        <img src="./src/3.png" class="carusel-image visually-hidden" alt="">
+        <img src="./src/4.png" class="carusel-image visually-hidden" alt="">
+        <img src="./src/5.png" class="carusel-image visually-hidden" alt="">
+      </div>
+      <button class="right">></button>
+    </section>
+    <ul class="tree" id="tree">
+      <li><span>Животные</span>
+        <ul>
+          <li><span>Млекопитающие</span>
+            <ul>
+              <li>Коровы</li>
+              <li>Ослы</li>
+              <li>Собаки</li>
+              <li>Тигры</li>
+            </ul>
+          </li>
+          <li><span>Другие</span>
+            <ul>
+              <li>Змеи</li>
+              <li>Птицы</li>
+              <li>Ящерицы</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span>Рыбы</span>
+        <ul>
+          <li><span>Аквариумные</span>
+            <ul>
+              <li>Гуппи</li>
+              <li>Скалярии</li>
+            </ul>
+          </li>
+          <li><span>Морские</span>
+            <ul>
+              <li>Морская форель</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <table id="grid">
+      <thead>
+        <tr>
+          <th data-type="number">Возраст</th>
+          <th data-type="string">Имя</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>Вася</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Петя</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Саша</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Миша</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Маша</td>
+        </tr>
+      </tbody>
+    </table>
+    <fieldset id="contents">
+      <legend>#contents</legend>
+      <p>
+        Как насчёт того, чтобы прочитать <a href="http://wikipedia.org">Википедию</a> или посетить <a href="http://w3.org"><i>W3.org</i></a> и узнать о современных стандартах?
+      </p>
+    </fieldset>
+    <script src="script.js"></script>
+  </body>
+</html>
